@@ -1,0 +1,104 @@
+<html>
+
+  <head>
+
+    <title>User Registration</title>
+
+    <link rel=”stylesheet” type=”text/css” href=”styles.css” />
+
+  </head>
+
+  <body>
+
+    <h1>User Registration</h1>
+    <p>Please enter the following information to register for our website</p>
+
+    <form id="theForm">
+      <p>
+        Title
+        <br>
+        <input type="radio" name="title" value="Mr">Mr
+        <input type="radio" name="title" value="Mrs">Mrs
+        <input type="radio" name="title" value="Miss">Miss
+      </p>
+      <p>
+        First name
+        <br>
+        <input type="text" name="first_name" size="20">
+      </p>
+      <p>
+        Last Name
+        <br>
+        <input type="text" name="last_name" size="30">
+      </p>
+      <p>
+        Age
+        <br>
+        <input type="number" name="age" min="13" max="100" step="1">
+      </p>
+      <p>
+        Email Address
+        <br>
+        <input type="email" name="email">
+      </p>
+      <button type="button" onClick="registerNow();">Register Now</button>
+    </form>
+
+    <div id="theResults" style="display:none;">
+      <h2>Thank you for registering! Here is the information we got:</h2>
+      <table style="border:4px solid black;">
+        <tr>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>Email Address</th>
+        </tr>
+        <tr>
+          <td id="results_title"></td>
+          <td id="results_first_name"></td>
+          <td id="results_last_name"></td>
+          <td id="results_age"></td>
+          <td id="results_email"></td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+
+  <script>
+
+    async function registerNow() {
+
+      const theForm = document.getElementById("theForm");
+      const userInfo = {
+        title: theForm.elements["title"].value,
+        first_name: theForm.elements["first_name"].value,
+        last_name: theForm.elements["last_name"].value,
+        age: theForm.elements["age"].value,
+        email: theForm.elements["email"].value
+      };
+      console.log("userInfo to be sent to server", userInfo);
+
+      const response = await fetch("/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userInfo)
+      });
+
+      const results = await response.json();
+      console.log("results from server", results);
+
+      document.getElementById("results_title").innerHTML = results.title;
+      document.getElementById("results_first_name").innerHTML = results.first_name;
+      document.getElementById("results_last_name").innerHTML = results.last_name;
+      document.getElementById("results_age").innerHTML = results.age;
+      document.getElementById("results_email").innerHTML = results.email;
+
+      document.getElementById("theResults").style.display = "";
+
+    }
+
+  </script>
+
+</html>

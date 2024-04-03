@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Progressive Example</title>
+  </head>
+  <body>
+    <form action="/handleForm" method="post" id="myForm">
+      Email: <input type="text" id="email" name="email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div id="myDiv" style="color:red;"></div>
+  </body>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      const email = document.getElementById("email").value;
+      if (!email.includes("@")) {
+        document.getElementById("myDiv").innerHTML = "Email must contain @";
+        event.preventDefault();
+      }
+    });
+  </script>
+</html>

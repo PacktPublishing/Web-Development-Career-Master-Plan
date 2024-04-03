@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+
+    <title>User Registration</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+
+  <body>
+
+    <h1>User Registration</h1>
+    <p>Please enter the following information to register for our website</p>
+
+    <form action="/register" method="post">
+      <p>
+        Title
+        <br>
+        <input type="radio" name="title" value="Mr">Mr
+        <input type="radio" name="title" value="Mrs">Mrs
+        <input type="radio" name="title" value="Miss">Miss
+      </p>
+      <p>
+        First name
+        <br>
+        <input type="text" name="first_name" size="20">
+      </p>
+      <p>
+        Last Name
+        <br>
+        <input type="text" name="last_name" size="30">
+      </p>
+      <p>
+        Age
+        <br>
+        <input type="number" name="age" min="13" max="100" step="1">
+      </p>
+      <p>
+        Email Address
+        <br>
+        <input type="email" name="email">
+      </p>
+      <button type="submit">Register Now</button>
+    </form>
+
+  </body>
+
+</html>

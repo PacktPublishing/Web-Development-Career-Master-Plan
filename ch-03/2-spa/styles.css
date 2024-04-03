@@ -1,0 +1,7 @@
+input:invalid {
+  outline: 2px solid red;
+}
+
+th { background-color: #e0e0e0; }
+tr { border: 1px solid #a0a0a0; }
+td { border: 1px solid #a0a0a0; }

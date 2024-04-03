@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Simple Responsive Design Example</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      @media (max-width: 600px) {
+        .container { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="background-color:#b0b0b0;">Column 1</div>
+      <div style="background-color:#b0b0b0;">Column 2</div>
+      <div style="background-color:#b0b0b0;">Column 3</div>
+    </div>
+  </body>
+</html>
