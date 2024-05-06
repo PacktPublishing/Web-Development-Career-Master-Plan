@@ -42,12 +42,12 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1        | NodeJS                     | Windows, macOS, or Linux |
-| 2        | Git            | Windows, macOS, or Linux |
-| 3        | VirtualBox + Ubutu Linux VirtualBox image            | Windows, macOS, or Linux |
-| 4        |Python           | Windows, macOS, or Linux |
-| 5        | Postman            | Windows, macOS, or Linux |
-| 6        | Java JDK            | Windows, macOS, or Linux |
+| 1-12       | NodeJS                     | Windows, macOS, or Linux |
+| 1-12      | Git            | Windows, macOS, or Linux |
+| 1-12       | VirtualBox + Ubutu Linux VirtualBox image            | Windows, macOS, or Linux |
+| 1-12       |Python           | Windows, macOS, or Linux |
+| 1-12       | Postman            | Windows, macOS, or Linux |
+| 1-12       | Java JDK            | Windows, macOS, or Linux |
 
 
 ### Related products
