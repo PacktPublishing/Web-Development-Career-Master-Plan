@@ -7,7 +7,7 @@ This is the code repository for [Web Development Career Master Plan](https://www
 **Learn what it means to be a web developer and launch your journey toward a career in the industry**
 
 ## What is this book about?
-The world of web development can seem daunting when you're a beginner and don't know where to get started. If you're passionate about web development and want to learn the art of creating captivating websites, then this book is for you.
+This guide will introduce you to basic concepts as well as a few advanced ones that will help you find entry-level employment in web development. You can use it as a springboard for achieving success in this dynamic field.
 
 This book covers the following exciting features:
 * Understand the fundamentals of HTML, CSS, and JavaScript to build web pages
